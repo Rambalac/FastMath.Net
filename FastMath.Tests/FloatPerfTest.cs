@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
-using System.Runtime.InteropServices;
-using FastMath.Net;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace FastMath.Tests
@@ -9,13 +6,13 @@ namespace FastMath.Tests
     [TestClass]
     public class FloatPerfTest : PerformanceTests
     {
-        float[] test = new float[2];
+        readonly float[] test = new float[2];
 
         [TestMethod]
         public void Fast24Add()
         {
             var a = new[] { 0.5f, 0.8f };
-            var b = 0.2f;
+            const float b = 0.2f;
             Start();
             for (var i = 0; i < PerformanceIterations; i++)
             {

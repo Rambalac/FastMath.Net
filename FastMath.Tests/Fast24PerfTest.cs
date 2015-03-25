@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
 using FastMath.Net;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -8,7 +7,7 @@ namespace FastMath.Tests
     [TestClass]
     public class Fast24PerfTest : PerformanceTests
     {
-        Fast24[] test = new Fast24[2];
+        readonly Fast24[] test = new Fast24[2];
 
         [TestMethod]
         public void Fast24Add()

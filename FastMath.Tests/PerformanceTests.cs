@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Reflection;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace FastMath.Tests
 {
@@ -13,7 +8,7 @@ namespace FastMath.Tests
     {
         public const int PerformanceIterations = 100000000;
 
-        private static ManualResetEvent h = new ManualResetEvent(true);
+        private static readonly ManualResetEvent h = new ManualResetEvent(true);
         private Stopwatch watch;
         public void Start()
         {

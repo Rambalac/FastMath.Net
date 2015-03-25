@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace FastMath.Net
+﻿namespace FastMath.Net
 {
     public struct Fast24
     {

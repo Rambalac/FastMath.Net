@@ -1,5 +1,4 @@
-﻿using System;
-using FastMath.Net;
+﻿using FastMath.Net;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace FastMath.Tests
