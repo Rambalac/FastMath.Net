@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace FastMath.Tests
@@ -12,9 +13,11 @@ namespace FastMath.Tests
     {
         public const int PerformanceIterations = 100000000;
 
+        private static ManualResetEvent h = new ManualResetEvent(true);
         private Stopwatch watch;
         public void Start()
         {
+            h.WaitOne();
             watch = Stopwatch.StartNew();
         }
 
@@ -22,8 +25,8 @@ namespace FastMath.Tests
         {
             watch.Stop();
             var sf = new StackTrace().GetFrame(1);
-
-            Console.WriteLine(sf.GetMethod().Name + ": " + watch.ElapsedMilliseconds + "ms");
+            Console.WriteLine(sf.GetMethod().ReflectedType.Name + "." + sf.GetMethod().Name + ": " + watch.ElapsedMilliseconds + "ms");
+            h.Set();
         }
     }
 }

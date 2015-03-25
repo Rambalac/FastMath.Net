@@ -31,7 +31,7 @@ namespace FastMath.Net
             res.b = v1.b + v2.b;
         }
     }
-    public struct RgbClass
+    public class RgbClass
     {
         public float r;
         public float g;
