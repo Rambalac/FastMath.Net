@@ -58,6 +58,7 @@
     <Compile Include="Fast24Test.cs" />
     <Compile Include="PerformanceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RgbTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FastMath.Net\FastMath.Net.csproj">

@@ -14,12 +14,14 @@ namespace FastMath.Tests
         [TestMethod]
         public void Fast24Add()
         {
-            var a = 0.5;
+            var a = new[] { 0.5, 0.8 };
             var b = 0.2;
+            Start();
             for (var i = 0; i < PerformanceIterations; i++)
             {
-                test[i & 1] = a + b;
+                test[i & 1] = a[i & 1] + b;
             }
+            Stop();
             Console.WriteLine(test[0] + test[1]);
         }
 
@@ -28,10 +30,12 @@ namespace FastMath.Tests
         {
             var a = 0.5;
             var b = 0.2;
+            Start();
             for (var i = 0; i < PerformanceIterations; i++)
             {
                 test[i & 1] = a - b;
             }
+            Stop();
             Console.WriteLine(test[0] + test[1]);
         }
 
@@ -40,10 +44,12 @@ namespace FastMath.Tests
         {
             var a = 0.5;
             var b = 0.2;
+            Start();
             for (var i = 0; i < PerformanceIterations; i++)
             {
                 test[i & 1] = a * b;
             }
+            Stop();
             Console.WriteLine(test[0] + test[1]);
         }
 
@@ -52,10 +58,12 @@ namespace FastMath.Tests
         {
             var a = 0.5;
             var b = 0.2;
+            Start();
             for (var i = 0; i < PerformanceIterations; i++)
             {
                 test[i & 1] = a / b;
             }
+            Stop();
             Console.WriteLine(test[0] + test[1]);
         }
     }
